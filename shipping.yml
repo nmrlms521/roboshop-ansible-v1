@@ -61,13 +61,13 @@
         state: present
 
     - name: Load schema
-      ansible.builtin.shell: mysql -h mysql-dev.rdevopsb87.online -uroot -pRoboShop@1 < /app/db/schema.sql
+      ansible.builtin.shell: mysql -h mysql-dev.smks.online -uroot -pRoboShop@1 < /app/db/schema.sql
 
     - name: Load user
-      ansible.builtin.shell: mysql -h mysql-dev.rdevopsb87.online -uroot -pRoboShop@1 < /app/db/app-user.sql
+      ansible.builtin.shell: mysql -h mysql-dev.smks.online -uroot -pRoboShop@1 < /app/db/app-user.sql
 
     - name: Load master data
-      ansible.builtin.shell: mysql -h mysql-dev.rdevopsb87.online -uroot -pRoboShop@1 < /app/db/master-data.sql
+      ansible.builtin.shell: mysql -h mysql-dev.smks.online -uroot -pRoboShop@1 < /app/db/master-data.sql
 
     - name: Copy shipping service file
       ansible.builtin.copy:
