@@ -12,7 +12,7 @@
   become: true
   tasks:
     - name: copy mongo db repo file
-      ansible.builtin.file:
+      ansible.builtin.copy:
         src: mongo.repo
         dest: /etc/yum.repos.d/mongo.repo
 
