@@ -17,6 +17,7 @@
 # systemctl restart nginx
 
 - name: Front end setup
+  become: true
   hosts: all
   tasks:
     - name: Install nginx 1.24
